@@ -12,7 +12,7 @@ export default function SearchPhotos() {
     const searchPhotos = async (e) => {
         e.preventDefault();
         unsplash.search
-            .photos(currentState, 3, 20)
+            .photos(currentState, 1, 20)
             .then(toJson)
             .then((json) => {
                 setPics(json.results)
@@ -21,9 +21,9 @@ export default function SearchPhotos() {
 
   return (
     <>
-        <form className="form" onSubmit={searchPhotos}> 
+      <form className="form" onSubmit={searchPhotos}> 
         <label className="label" htmlFor="query"> 
-          {" "}
+          {}
           📷
         </label>
         <input
